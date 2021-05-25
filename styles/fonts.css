@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap');
+
+.font-main {
+  font-family: 'Inter', sans-serif;
+}
+
+.h1 {
+  font-size: 60px;
+  line-height: 65px;
+}
+
+.h2 {
+    font-size: 24px;
+}
+
+.h3 {
+  font-size: 20px
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.font-italic {
+  font-style: italic;
+}

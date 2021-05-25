@@ -6,6 +6,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -13,4 +18,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/********** OPACITY **********/
+.opacity-7 {
+  opacity: .7;
+}
+
+.br-reg {
+  border-radius: 8px;
+}
+
+.btn {
+  cursor: pointer
+}
+
+.fullpage {
+  width: 100vw;
+  height: 100vh;
 }

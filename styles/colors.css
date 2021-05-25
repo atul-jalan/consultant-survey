@@ -1,0 +1,48 @@
+.bg-color {
+  color: #ffd5c2;
+}
+
+.primary-accent {
+  color: #192a51;
+}
+
+.secondary-accent {
+  color: #c8553d;
+}
+
+.text-color {
+  color: #220901;
+}
+
+.white-color {
+  color: #ffffff;
+}
+
+.bg-color-background {
+  background-color: #ffd5c2;
+}
+
+.primary-accent-background {
+  background-color: #192a51;
+}
+
+.secondary-accent-background {
+  background-color: #c8553d;
+}
+
+.text-color-background {
+  background-color: #220901;
+}
+
+.white-color-background {
+  background-color: #ffffff;
+}
+
+.btn {
+    background-color: #c8553d;
+}
+
+.btn:hover {
+    transition: .2s background-color linear;
+    background-color: #c73c3c;
+}
