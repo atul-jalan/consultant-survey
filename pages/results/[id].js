@@ -1,9 +1,27 @@
+import { useEffect, useState } from 'react';
 import fire from '../../config/fire-config';
 
-const Results = ({ id, stats }) => {
+const Results = ({ id }) => {
+
+    const [results, setResults] = useState("")
+
+    useEffect(() => {
+        const getData = async () => {
+            const snapshot = await fire.firestore().collection('responses').get()
+
+            const documents = {}
+            snapshot.forEach(doc => {
+                documents[doc.id] = doc.data();
+            });
+
+            setResults(documents[id].RESULT + '%')
+        }
+        getData();
+    }, [])
+    
     return (
         <div>
-            <p>{stats[id].RESULT}%</p>
+            <p>{results}</p>
         </div>
     )
 }
@@ -11,17 +29,9 @@ const Results = ({ id, stats }) => {
 export async function getServerSideProps(context) {
     const { id } = context.params;
 
-    const snapshot = await fire.firestore().collection('responses').get()
-
-    const documents = {}
-    snapshot.forEach(doc => {
-        documents[doc.id] = doc.data();
-    });
-
     return {
         props: {
-            id,
-            stats: documents
+            id
         },
     }
 }
