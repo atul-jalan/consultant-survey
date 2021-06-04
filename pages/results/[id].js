@@ -1,7 +1,6 @@
 import fire from '../../config/fire-config';
 
 const Results = ({ id, stats }) => {
-    console.log(stats)
     return (
         <div>
             <p>{stats[id].RESULT}%</p>
