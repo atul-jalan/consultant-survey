@@ -51,7 +51,7 @@ const questions = [
         id: 'answer',
         type: 'mc',
         title: 'What is your current career plan (this will only be used for training the AI, not for computing your results!)',
-        choices: ['Consultant', 'Banking/Finance', 'Software Engineering', 'STEM field other than programming', 'Liberal Arts', 'Other', 'I do not believe in labor']
+        choices: ['Consulting', 'Banking/Finance', 'Software Engineering', 'a STEM field other than programming', 'Liberal Arts', 'Other', 'I do not believe in labor']
     }
 ]
 
