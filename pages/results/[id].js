@@ -88,7 +88,8 @@ const Title = ({ percent, isConsultant }) => {
   return (
     <div className="flex flex-column align-center justify-center" style={{height: '100vh'}}>
       <p className="h1 font-main secondary-accent fw-black marginbottom-24">{getSentences()[0]}</p>
-      <p className="h1 font-main primary-accent fw-black">{getSentences()[1]}</p>
+      <p className="h1 font-main primary-accent fw-black marginbottom-24">{getSentences()[1]}</p>
+      <p className="font-main primary-accent">&#8595; Scroll down &#8595;</p>
     </div>
   )
 }
@@ -178,9 +179,10 @@ const OtherConsultantsGraph = ({ percentageDistro, yourPercent }) => {
   };
 
   return (
-    <div className="flex flex-column align-center justify-center" style={{height: '100vh'}}>
+    <div className="flex flex-column align-center justify-center" style={{minHeight: '100vh'}}>
       <p className="h1 font-main secondary-accent fw-black marginbottom-24">Your chances are <span className="primary-accent">{relationshipToAverage()} the average</span> NU student ({average}%).</p>
       <Bar data={consultantChance} options={options} />
+      <p className="font-main primary-accent margintop-24" style={{marginBottom: '256px'}}>&#8595; Scroll down &#8595;</p>
     </div>
   )
 }
@@ -255,9 +257,10 @@ const CareerChoicesGraph = ({ yourCareerChoice, otherCareerChoices }) => {
   };
 
   return (
-    <div className="flex flex-column align-center justify-center" style={{height: '100vh'}}>
+    <div className="flex flex-column align-center justify-center" style={{minHeight: '100vh'}}>
       <p className="h1 font-main secondary-accent fw-black marginbottom-24">{yourCareerChoice === mostCommonCareer ? 'Like' : 'Unlike'} you, most students plan on pursuing a career in <span className="primary-accent">{careerChoices[mostCommonCareer]}.</span></p>
       <Bar data={careerChance} options={options} />
+      <p className="font-main primary-accent margintop-24" style={{marginBottom: '256px'}}>&#8595; Scroll down &#8595;</p>
     </div>
   )
 }
